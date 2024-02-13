@@ -26,6 +26,15 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer base {
+  body {
+    @apply text-indigo-200 !important;
+  }
+  a {
+    @apply hover:text-indigo-50 transition-colors duration-700;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
