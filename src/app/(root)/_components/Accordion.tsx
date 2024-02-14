@@ -11,7 +11,7 @@ interface AccordionProps {
 export const Accordion: React.FC<AccordionProps> = ({ text, title }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className=" rounded-3xl bg-gradient-to-r   from-indigo-900  to-indigo-600 p-8 h-min">
+    <div className=" rounded-3xl bg-gradient-to-r basis-1/2  from-indigo-900  to-indigo-600 p-8 h-full">
       <div
         className="flex justify-between cursor-pointer"
         onClick={() => setOpen((p) => !p)}
