@@ -21,10 +21,10 @@ export const Categories = () => {
       </div>
       <div className="grid grid-cols-3 gap-4">
         {selected === "wszystkie"
-          ? posts.map((p) => <CategoryTile {...p} />)
+          ? posts.map((p) => <CategoryTile key={p.title} {...p} />)
           : posts
               .filter((p) => p.category.toLocaleLowerCase() === selected)
-              .map((p) => <CategoryTile {...p} />)}
+              .map((p) => <CategoryTile key={p.title} {...p} />)}
       </div>
     </div>
   );

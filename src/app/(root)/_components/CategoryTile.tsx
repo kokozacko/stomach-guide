@@ -8,6 +8,7 @@ interface CategoryTileProps {
   title: string;
   category: string;
   author: string;
+  slug: number;
 }
 
 export const CategoryTile: React.FC<CategoryTileProps> = ({
@@ -15,9 +16,11 @@ export const CategoryTile: React.FC<CategoryTileProps> = ({
   category,
   imgSrc,
   title,
+  slug,
 }) => {
+  console.log(slug);
   return (
-    <Link href="/" className="">
+    <Link href={`/posts/${slug.toString()}`} className="">
       <div
         className="flex flex-col h-full border rounded-2xl overflow-hidden border-indigo-400 bg-[linear-gradient(45deg,transparent_25%,rgba(68,68,68,.2)_50%,transparent_75%,transparent_100%)] duration-[1200ms]
        bg-[length:250%_200%,100%_100%] bg-[position:-100%_0,0_0] bg-no-repeat shadow-2xl transition-[background-position_0s_ease] hover:bg-[position:200%_0,0_0] "

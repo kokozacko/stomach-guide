@@ -1,7 +1,5 @@
-import { categories } from "../data/constans";
-import { Accordion } from "./_components/Accordion";
 import { Categories } from "./_components/Categories";
-import { CategoryBadge } from "./_components/CategoryBadge";
+
 import Hero from "./_components/Hero";
 import { Questions } from "./_components/Questions";
 
