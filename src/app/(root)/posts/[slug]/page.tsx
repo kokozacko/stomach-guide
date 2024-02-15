@@ -5,12 +5,13 @@ export default function Posts({ params }: { params: { slug: string } }) {
   const post = posts.find((p) => p.slug.toString() === params.slug);
   console.log(post);
   return (
-    <section className="min-h-[calc(100vh-8rem)] pt-20 flex flex-col px-4 ">
-      <div className="flex justify-between border-b border-indigo-400 pb-4">
-        <h1 className="text-3xl ">{post?.title}</h1>
+    <section className="flex flex-col px-4 pt-48">
+      <div className="flex flex-col md:flex-row justify-between border-b gap-4 border-indigo-400 pb-4">
+        <h1 className="sm:text-3xl ">{post?.title}</h1>
         <div className="flex gap-4">
           <div className="flex items-center gap-2">
-            <User className="text-indigo-600" /> <span>{post?.author}</span>
+            <User className="text-indigo-600 shrink-0" />{" "}
+            <span className="w-max">{post?.author}</span>
           </div>
           <div className="flex items-center gap-2">
             <Tag className="text-indigo-600" />{" "}
@@ -18,7 +19,7 @@ export default function Posts({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </div>
-      <article className="pt-10 flex flex-col gap-6 text-xl">
+      <article className="pt-10 flex flex-col gap-6 sm:text-xl">
         <p className="text-justify ">{post?.content}</p>
         {post?.content2 ? (
           <p className="text-justify">{post?.content2}</p>

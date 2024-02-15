@@ -13,10 +13,10 @@ export const Accordion: React.FC<AccordionProps> = ({ text, title }) => {
   return (
     <div className=" rounded-3xl bg-gradient-to-r basis-1/2  from-indigo-900  to-indigo-600 p-8 h-full">
       <div
-        className="flex justify-between cursor-pointer"
+        className="flex justify-between items-center md:items-start cursor-pointer"
         onClick={() => setOpen((p) => !p)}
       >
-        <h4 className="text-2xl font-bold">{title}</h4>
+        <h4 className=" text-xl md:text-2xl font-bold">{title}</h4>
         {open ? (
           <Minus className="h-10 w-10" />
         ) : (

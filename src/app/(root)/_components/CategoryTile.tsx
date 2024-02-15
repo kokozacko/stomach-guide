@@ -32,7 +32,7 @@ export const CategoryTile: React.FC<CategoryTileProps> = ({
           <div className="mb-10 grow">
             <h5 className="text-2xl text-indigo-100">{title}</h5>
           </div>
-          <div className="flex  gap-36">
+          <div className="flex gap-4  md:gap-36">
             <div className="flex items-center gap-2">
               <User className="text-indigo-600" /> <span>{author}</span>
             </div>

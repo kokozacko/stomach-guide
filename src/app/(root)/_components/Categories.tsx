@@ -9,7 +9,7 @@ export const Categories = () => {
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex gap-4">
+      <div className="flex gap-4 flex-wrap">
         {categories.map((c) => (
           <CategoryBadge
             key={c}
@@ -19,7 +19,7 @@ export const Categories = () => {
           />
         ))}
       </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
         {selected === "wszystkie"
           ? posts.map((p) => <CategoryTile key={p.title} {...p} />)
           : posts
