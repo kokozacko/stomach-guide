@@ -1,5 +1,5 @@
 "use client";
-import { categories, posts } from "@/app/data/constans";
+import { categories, posts } from "@/data/constans";
 import React, { useState } from "react";
 import { CategoryBadge } from "./CategoryBadge";
 import { CategoryTile } from "./CategoryTile";

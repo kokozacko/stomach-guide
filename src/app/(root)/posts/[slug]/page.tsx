@@ -1,4 +1,4 @@
-import { posts } from "@/app/data/constans";
+import { posts } from "@/data/constans";
 import { Dot, Tag, User } from "lucide-react";
 
 export default function Posts({ params }: { params: { slug: string } }) {
